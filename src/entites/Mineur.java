@@ -1,18 +1,18 @@
 package entites;
 
 // Class abstraite
-public abstract class Mineur extends Personne{
-	
+public abstract class Mineur extends Personne {
+
 	// propriétés
 	private String ecole;
-	
+
 	// Constructeurs
 	public Mineur() {
-		
+
 	}
-	
-	public Mineur (String nom, String prenom, int age, String ecole) {
-		super(nom,prenom,age);
+
+	public Mineur(String nom, String prenom, int age, String ecole) {
+		super(nom, prenom, age);
 		this.ecole = ecole;
 	}
 
@@ -24,13 +24,12 @@ public abstract class Mineur extends Personne{
 	public void setEcole(String ecole) {
 		this.ecole = ecole;
 	}
-	
+
 	public String toString() {
-		return super.toString() + " " + this.getEcole();
+		return super.toString() + " Va à l'école : " + this.getEcole() + "\n";
 	}
-	
+
 	// methode abstraite
 	public abstract String grandir();
-	
-	
+
 }
