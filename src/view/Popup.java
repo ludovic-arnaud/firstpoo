@@ -2,19 +2,24 @@ package view;
 
 import javax.swing.JOptionPane;
 
-public class Popup {
+public class Popup implements Display {
 
 	// Properties
 	private String[] choice = { "Oui", "Non" };
 	private JOptionPane popup;
-	
+
 	// Constructor
 	public Popup() {
 		this.popup = new JOptionPane();
 	}
 
-	// Demander l'âge
+	/*
+	 * Méthodes de saisie
+	 */
+
+	// Saisie de l'âge
 	@SuppressWarnings("static-access")
+	@Override
 	public int askAge(int min, int max) {
 		boolean ok = false;
 		int i = 0;
@@ -40,15 +45,17 @@ public class Popup {
 		return i;
 	}
 
-	// Demander String
+	// Saisie d'un String
+	@SuppressWarnings("static-access")
+	@Override
 	public String askString(String type) {
-		@SuppressWarnings("static-access")
 		String var = this.popup.showInputDialog(null, "Saisir votre " + type, type, JOptionPane.QUESTION_MESSAGE);
 		return var;
 	}
 
-	// Demander boolean
+	// Saisie d'un booléen
 	@SuppressWarnings("static-access")
+	@Override
 	public boolean askBoolean(String type) {
 		boolean b = false;
 		int i = this.popup.showOptionDialog(null, // fenêtre parente
@@ -64,8 +71,14 @@ public class Popup {
 		}
 		return b;
 	}
-	
+
+	/*
+	 * Méthodes d'affichage
+	 */
+
+	// Affichage des informations saisies dans un popup
 	@SuppressWarnings("static-access")
+	@Override
 	public void showInfos(String str) {
 		this.popup.showMessageDialog(null, str, "Récapitulatif", JOptionPane.INFORMATION_MESSAGE);
 	}
