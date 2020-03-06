@@ -6,8 +6,18 @@ import javax.swing.JOptionPane;
 
 public class Read {
 
-	public static Scanner scan = new Scanner(System.in);
+	public static Scanner scan;
 	public static String[] choix = { "Oui", "Non" };
+	
+	// Open scanner
+	public static void openScanner() {
+		scan = new Scanner(System.in);
+	}
+	
+	// Close scanner
+	public static void closeScanner() {
+		scan.close();
+	}
 
 	// Scanner pour demander l'âge
 	public static int askAge(int min, int max) {
