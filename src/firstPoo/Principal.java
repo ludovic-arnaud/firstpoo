@@ -11,8 +11,6 @@ import view.popup;
 public class Principal {
 
 	public static void main(String[] args) {
-		
-		Read.openScanner();
 
 		int age = Read.askAge(0, 120);
 
@@ -40,8 +38,6 @@ public class Principal {
 			unAdo.setPortable(Read.askBoolean("Portable"));
 			popup.showInfos(unAdo.toString());
 		}
-		
-		Read.closeScanner();
 
 		// instance de Personne
 //		Personne unePersonne = new Personne();

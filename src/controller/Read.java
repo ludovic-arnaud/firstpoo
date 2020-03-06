@@ -1,25 +1,14 @@
 package controller;
 
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class Read {
 
-	public static Scanner scan;
+	
 	public static String[] choix = { "Oui", "Non" };
 	
-	// Open scanner
-	public static void openScanner() {
-		scan = new Scanner(System.in);
-	}
-	
-	// Close scanner
-	public static void closeScanner() {
-		scan.close();
-	}
 
-	// Scanner pour demander l'âge
+	// Demander l'âge
 	public static int askAge(int min, int max) {
 		boolean ok = false;
 		int i = 0;
@@ -45,13 +34,13 @@ public class Read {
 		return i;
 	}
 
-	// Scanner de String
+	// Demander String
 	public static String askString(String type) {
 		String var = JOptionPane.showInputDialog(null, "Saisir votre " + type, type, JOptionPane.QUESTION_MESSAGE);
 		return var;
 	}
 
-	// Scanner de boolean
+	// Demander boolean
 	public static boolean askBoolean(String type) {
 		boolean b = false;
 		int i = JOptionPane.showOptionDialog(null, // fenêtre parente
