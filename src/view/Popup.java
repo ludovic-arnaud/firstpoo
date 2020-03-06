@@ -1,8 +1,8 @@
-package controller;
+package view;
 
 import javax.swing.JOptionPane;
 
-public class Read {
+public class Popup {
 
 	
 	public static String[] choix = { "Oui", "Non" };
@@ -55,6 +55,10 @@ public class Read {
 			b = true;
 		}
 		return b;
+	}
+	
+	public static void showInfos(String str) {
+		JOptionPane.showMessageDialog(null, str, "Récapitulatif", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 }

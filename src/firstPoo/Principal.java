@@ -3,40 +3,37 @@ package firstPoo;
 import entites.Ado;
 import entites.Enfant;
 import entites.Majeur;
-//import entites.Mineur;
-//import entites.Personne;
-import controller.Read;
-import view.popup;
+import view.Popup;
 
 public class Principal {
 
 	public static void main(String[] args) {
 
-		int age = Read.askAge(0, 120);
+		int age = Popup.askAge(0, 120);
 
 		if (age <= 12) {
 			Enfant unEnfant = new Enfant();
-			unEnfant.setNom(Read.askString("Nom"));
-			unEnfant.setPrenom(Read.askString("Prénom"));
+			unEnfant.setNom(Popup.askString("Nom"));
+			unEnfant.setPrenom(Popup.askString("Prénom"));
 			unEnfant.setAge(age);
-			unEnfant.setEcole(Read.askString("Ecole"));
-			unEnfant.setVelo(Read.askBoolean("Vélo"));
-			popup.showInfos(unEnfant.toString());
+			unEnfant.setEcole(Popup.askString("Ecole"));
+			unEnfant.setVelo(Popup.askBoolean("Vélo"));
+			Popup.showInfos(unEnfant.toString());
 		} else if (age >= 18) {
 			Majeur unMajeur = new Majeur();
-			unMajeur.setNom(Read.askString("Nom"));
-			unMajeur.setPrenom(Read.askString("Prénom"));
+			unMajeur.setNom(Popup.askString("Nom"));
+			unMajeur.setPrenom(Popup.askString("Prénom"));
 			unMajeur.setAge(age);
-			unMajeur.setVote(Read.askBoolean("Carte d'électeur"));
-			popup.showInfos(unMajeur.toString());
+			unMajeur.setVote(Popup.askBoolean("Carte d'électeur"));
+			Popup.showInfos(unMajeur.toString());
 		} else {
 			Ado unAdo = new Ado();
-			unAdo.setNom(Read.askString("Nom"));
-			unAdo.setPrenom(Read.askString("Prénom"));
+			unAdo.setNom(Popup.askString("Nom"));
+			unAdo.setPrenom(Popup.askString("Prénom"));
 			unAdo.setAge(age);
-			unAdo.setEcole(Read.askString("Ecole"));
-			unAdo.setPortable(Read.askBoolean("Portable"));
-			popup.showInfos(unAdo.toString());
+			unAdo.setEcole(Popup.askString("Ecole"));
+			unAdo.setPortable(Popup.askBoolean("Portable"));
+			Popup.showInfos(unAdo.toString());
 		}
 
 		// instance de Personne
