@@ -9,65 +9,41 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		int age = Popup.askAge(0, 120);
+		// Instanciation d'un objet Popup pour utiliser ses méthodes
+		Popup popup = new Popup();
 
+		// On demande en premier à l'utilisateur de saisir son age
+		int age = popup.askAge(0, 120);
+
+		// En fonction de l'age saisie, on détermine si c'est un Majeur, un Enfant ou un
+		// Ado
 		if (age <= 12) {
+			// Si age<=12 on crée un objet Enfant
 			Enfant unEnfant = new Enfant();
-			unEnfant.setNom(Popup.askString("Nom"));
-			unEnfant.setPrenom(Popup.askString("Prénom"));
+			unEnfant.setNom(popup.askString("Nom"));
+			unEnfant.setPrenom(popup.askString("Prénom"));
 			unEnfant.setAge(age);
-			unEnfant.setEcole(Popup.askString("Ecole"));
-			unEnfant.setVelo(Popup.askBoolean("Vélo"));
-			Popup.showInfos(unEnfant.toString());
+			unEnfant.setEcole(popup.askString("Ecole"));
+			unEnfant.setVelo(popup.askBoolean("Vélo"));
+			popup.showInfos(unEnfant.toString());
 		} else if (age >= 18) {
+			// Si age>=18 on crée un objet Majeur
 			Majeur unMajeur = new Majeur();
-			unMajeur.setNom(Popup.askString("Nom"));
-			unMajeur.setPrenom(Popup.askString("Prénom"));
+			unMajeur.setNom(popup.askString("Nom"));
+			unMajeur.setPrenom(popup.askString("Prénom"));
 			unMajeur.setAge(age);
-			unMajeur.setVote(Popup.askBoolean("Carte d'électeur"));
-			Popup.showInfos(unMajeur.toString());
+			unMajeur.setVote(popup.askBoolean("Carte d'électeur"));
+			popup.showInfos(unMajeur.toString());
 		} else {
+			// Si age>12 et <18 on crée un objet Ado
 			Ado unAdo = new Ado();
-			unAdo.setNom(Popup.askString("Nom"));
-			unAdo.setPrenom(Popup.askString("Prénom"));
+			unAdo.setNom(popup.askString("Nom"));
+			unAdo.setPrenom(popup.askString("Prénom"));
 			unAdo.setAge(age);
-			unAdo.setEcole(Popup.askString("Ecole"));
-			unAdo.setPortable(Popup.askBoolean("Portable"));
-			Popup.showInfos(unAdo.toString());
+			unAdo.setEcole(popup.askString("Ecole"));
+			unAdo.setPortable(popup.askBoolean("Portable"));
+			popup.showInfos(unAdo.toString());
 		}
-
-		// instance de Personne
-//		Personne unePersonne = new Personne();
-//		unePersonne.setNom("Dupond");
-//		unePersonne.setPrenom("Alain");
-//		unePersonne.setAge(25);
-//		System.out.println(unePersonne.toString());
-
-		// autre instance de Personne
-//		Personne nicolas = new Personne("Escaich", "Nicolas", 34);
-//		System.out.println(nicolas.toString());
-//		nicolas.setNom("Machin");
-//		System.out.println("\n"+nicolas.getPrenom()+"\n");
-//		System.out.println(nicolas.toString());
-
-		// instance de Majeur
-//		Majeur maj = new Majeur("Martin","Paul",40,true);	
-//		System.out.println(maj.toString()+maj.travailler());
-
-		// instance de Mineur
-//		Mineur min = new Mineur("Duran","Kevin",10,"Victor Hugo");
-//		System.out.println(min.toString());
-
-		// instance de Ado
-//		Ado ado = new Ado("Duran","Jessica",14,"Victor Hugo",true);
-//		System.out.println(ado.toString()+ado.conduireScooter()+ado.grandir());
-//		
-//		Ado ado2 = new Ado();
-//		ado2.setNom("azerty");
-
-		// instance d'Enfant
-//		Enfant enf = new Enfant("Duran","Max",9,"Victor Hugo",true);
-//		System.out.println(enf.toString()+enf.jouer()+enf.grandir());
 
 	}
 
