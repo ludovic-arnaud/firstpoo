@@ -13,7 +13,7 @@ public class Principal {
 		Popup popup = new Popup();
 
 		// On demande en premier à l'utilisateur de saisir son age
-		int age = popup.askAge(0, 120);
+		int age = popup.askAge(1, 120);
 
 		// En fonction de l'age saisie, on détermine si c'est un Majeur, un Enfant ou un
 		// Ado

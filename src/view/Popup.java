@@ -26,17 +26,17 @@ public class Popup implements Display {
 
 		do {
 			try {
-				String var = this.popup.showInputDialog(null, "Saisir votre âge (entre 0 et 120)", "AGE",
+				String var = this.popup.showInputDialog(null, "Saisir votre âge (entre "+min+" et "+max+")", "AGE",
 						JOptionPane.QUESTION_MESSAGE);
 				i = Integer.parseInt(var);
 				if (i >= min && i <= max) {
 					ok = true;
 				} else {
-					this.popup.showMessageDialog(null, "Saisir une nouvelle valeur entre 0 et 120", "ERREUR",
+					this.popup.showMessageDialog(null, "Saisir une nouvelle valeur (entre "+min+" et "+max+")", "ERREUR",
 							JOptionPane.ERROR_MESSAGE);
 				}
 			} catch (Exception e) {
-				this.popup.showMessageDialog(null, "Saisir une nouvelle valeur entre 0 et 120", "ERREUR",
+				this.popup.showMessageDialog(null, "Saisir une nouvelle valeur (entre "+min+" et "+max+")", "ERREUR",
 						JOptionPane.ERROR_MESSAGE);
 			}
 
