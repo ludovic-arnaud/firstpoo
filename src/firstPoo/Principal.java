@@ -44,6 +44,9 @@ public class Principal {
 			unAdo.setPortable(popup.askBoolean("Portable"));
 			popup.showInfos(unAdo.toString());
 		}
+		
+		// Méthode à appeler pour fermer le Scanner si on travaille avec un objet Console
+		// popup.finalyse();
 
 	}
 
