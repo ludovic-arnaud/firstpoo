@@ -18,9 +18,8 @@ public class Personne {
 		this.age = age;
 	}
 
-	public Personne(String nom, String prenom0) {
+	public Personne(String nom, String prenom) {
 		this.setNom(nom);
-
 		this.setPrenom(prenom);
 	}
 
