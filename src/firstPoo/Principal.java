@@ -3,6 +3,7 @@ package firstPoo;
 import entites.Ado;
 import entites.Enfant;
 import entites.Majeur;
+//import view.Console;
 import view.Popup;
 
 public class Principal {
@@ -11,6 +12,9 @@ public class Principal {
 
 		// Instanciation d'un objet Popup pour utiliser ses méthodes
 		Popup popup = new Popup();
+		
+		// Instanciation d'un objet Popup pour utiliser ses méthodes
+		//Console popup = new Console();
 
 		// On demande en premier à l'utilisateur de saisir son age
 		int age = popup.askAge(1, 120);
