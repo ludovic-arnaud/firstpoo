@@ -13,7 +13,7 @@ public class Principal {
 		// Instanciation d'un objet Popup pour utiliser ses méthodes
 		Popup popup = new Popup();
 		
-		// Instanciation d'un objet Popup pour utiliser ses méthodes
+		// Instanciation d'un objet Console pour utiliser ses méthodes
 		//Console popup = new Console();
 
 		// On demande en premier à l'utilisateur de saisir son age
