@@ -14,10 +14,10 @@ public class Popup implements Display {
 	}
 
 	/*
-	 * Méthodes de saisie
+	 * Mï¿½thodes de saisie
 	 */
 
-	// Saisie de l'âge
+	// Saisie de l'ï¿½ge
 	@SuppressWarnings("static-access")
 	@Override
 	public int askAge(int min, int max) {
@@ -26,7 +26,7 @@ public class Popup implements Display {
 
 		do {
 			try {
-				String var = this.popup.showInputDialog(null, "Saisir votre âge (entre "+min+" et "+max+")", "AGE",
+				String var = this.popup.showInputDialog(null, "Saisir votre Ã¢ge (entre "+min+" et "+max+")", "AGE",
 						JOptionPane.QUESTION_MESSAGE);
 				i = Integer.parseInt(var);
 				if (i >= min && i <= max) {
@@ -53,19 +53,19 @@ public class Popup implements Display {
 		return var;
 	}
 
-	// Saisie d'un booléen
+	// Saisie d'un boolï¿½en
 	@SuppressWarnings("static-access")
 	@Override
 	public boolean askBoolean(String type) {
 		boolean b = false;
-		int i = this.popup.showOptionDialog(null, // fenêtre parente
+		int i = this.popup.showOptionDialog(null, // fenï¿½tre parente
 				"Avez-vous un(e) " + type + " ?", // corps du dialogue
 				type, // titre du dialogue
 				JOptionPane.DEFAULT_OPTION, // type de dialogue
-				JOptionPane.QUESTION_MESSAGE, // type d'icône
-				null, // icône optionnelle
+				JOptionPane.QUESTION_MESSAGE, // type d'icï¿½ne
+				null, // icï¿½ne optionnelle
 				choice, // boutons (renvoie au tableau choix)
-				choice[1]); // choix par défaut
+				choice[1]); // choix par dï¿½faut
 		if (i == 0) {
 			b = true;
 		}
@@ -73,14 +73,14 @@ public class Popup implements Display {
 	}
 
 	/*
-	 * Méthodes d'affichage
+	 * Mï¿½thodes d'affichage
 	 */
 
 	// Affichage des informations saisies dans un popup
 	@SuppressWarnings("static-access")
 	@Override
 	public void showInfos(String str) {
-		this.popup.showMessageDialog(null, str, "Récapitulatif", JOptionPane.INFORMATION_MESSAGE);
+		this.popup.showMessageDialog(null, str, "RÃ©capitulatif", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 }

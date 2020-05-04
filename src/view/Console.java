@@ -18,7 +18,7 @@ public class Console implements Display {
 	}
 	
 	/*
-	 * Méthodes de saisie
+	 * Mï¿½thodes de saisie
 	 */
 
 	// Saisie de l'age
@@ -26,7 +26,7 @@ public class Console implements Display {
 	public int askAge(int min, int max) {
 		boolean ok = false;
 		int i = 0;
-		String request = "Indiquez votre âge (valeur entre "+min+" et "+max+")";
+		String request = "Indiquez votre Ã¢ge (valeur entre "+min+" et "+max+")";
 		String err = "Erreur, saisir une nouvelle valeur entre "+min+" et "+max;
 
 		do {
@@ -58,13 +58,13 @@ public class Console implements Display {
 		return str;
 	}
 
-	// Saisie d'un booléen
+	// Saisie d'un boolï¿½en
 	@Override
 	public boolean askBoolean(String type) {
 		boolean b = false;
 		boolean ok = false;
 		char c;
-		String request = "Possédez-vous un(e) "+type;
+		String request = "PossÃ©dez-vous un(e) "+type;
 		String err = "Erreur, saisir une nouvelle valeur, soit O ou N";
 		
 		do {
@@ -92,7 +92,7 @@ public class Console implements Display {
 	}
 
 	/*
-	 * Méthodes d'affichage
+	 * Mï¿½thodes d'affichage
 	 */
 	
 	// Affichage des informations saisies dans la console
